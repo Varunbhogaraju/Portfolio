@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Varun Bhogaraju | Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#ffffff;--text:#111111;--accent:#38bdf8;--card:#ffffff;--soft:#f5f5f5}
+body.dark{--bg:#0a0a0a;--text:#ffffff;--accent:#38bdf8;--card:#111111;--soft:#1a1a1a}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);transition:.3s}
+header{display:flex;justify-content:space-between;align-items:center;padding:20px 8%;background:var(--card);position:sticky;top:0;border-bottom:1px solid #e5e5e5;z-index:1000}
+body.dark header{border-bottom:1px solid #222}
+header h1{font-size:1.3rem;font-weight:600}
+nav a{margin-left:20px;text-decoration:none;color:var(--text);font-weight:500;position:relative}
+nav a::after{content:'';width:0;height:2px;background:var(--accent);position:absolute;left:0;bottom:-4px;transition:.3s}
+nav a:hover::after{width:100%}
+.toggle-btn{margin-left:20px;padding:6px 12px;border-radius:20px;border:1px solid var(--accent);background:transparent;color:var(--accent);cursor:pointer;font-size:.8rem}
+.hero{padding:130px 8% 90px;text-align:center;background:var(--soft)}
+.hero h2{font-size:2.5rem;margin-bottom:15px}
+.hero span{color:var(--accent)}
+.hero p{max-width:650px;margin:auto;font-size:1rem;line-height:1.7}
+section{padding:80px 8%}
+.section-title{text-align:center;margin-bottom:45px;font-size:1.8rem;font-weight:600;position:relative}
+.section-title::after{content:'';display:block;width:60px;height:3px;background:var(--accent);margin:12px auto 0}
+.frame{background:var(--soft);padding:40px;border-radius:16px}
+.card{background:var(--card);padding:25px;border-radius:12px;margin-bottom:25px;border:1px solid #eaeaea;transition:.3s}
+body.dark .card{border:1px solid #222}
+.card:hover{border-color:var(--accent)}
+.card h3{color:var(--accent);margin-bottom:10px}
+.card p{font-size:.95rem;line-height:1.7}
+.progress{background:#e5e5e5;border-radius:20px;margin:10px 0 20px;height:8px;overflow:hidden}
+body.dark .progress{background:#222}
+.bar{height:100%;background:var(--accent);border-radius:20px;width:0;transition:1.2s}
+.btn{display:inline-block;margin-top:12px;padding:8px 16px;border-radius:20px;border:1px solid var(--accent);color:var(--accent);text-decoration:none;font-size:.85rem;transition:.3s}
+.btn:hover{background:var(--accent);color:#000}
+.fade{opacity:0;transform:translateY(25px);transition:.8s}
+.fade.show{opacity:1;transform:translateY(0)}
+footer{text-align:center;padding:35px;background:var(--soft);margin-top:60px;font-size:.9rem}
+@media(max-width:768px){.hero h2{font-size:1.8rem}}
+</style>
+</head>
+<body>
+<header>
+<h1>Varun Bhogaraju</h1>
+<nav>
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+<a href="#certifications">Certifications</a>
+<a href="#contact">Contact</a>
+<a href="https://github.com/Varunbhogaraju" target="_blank">GitHub</a>
+<button class="toggle-btn" onclick="toggleMode()">Mode</button>
+</nav>
+</header>
+<section class="hero">
+<h2 id="typing"></h2>
+<p>Final-year Computer Science student focused on backend development, automation systems, and building practical software solutions that address real-world problems.</p>
+</section>
+<section id="about">
+<h2 class="section-title">About Me</h2>
+<div class="frame">
+<div class="card fade">
+Computer Science undergraduate with working knowledge in Python, Java, SQL, and web technologies. I prioritize building efficient and practical systems rather than theoretical demonstrations. Currently seeking an entry-level opportunity to contribute and grow in a professional environment.
+</div>
+</div>
+</section>
+<section id="skills">
+<h2 class="section-title">Technical Skills</h2>
+<div class="frame">
+<div class="card fade">
+<h3>Python</h3>
+<div class="progress"><div class="bar" data-width="80%"></div></div>
+<h3>Java</h3>
+<div class="progress"><div class="bar" data-width="50%"></div></div>
+<h3>Web Development</h3>
+<div class="progress"><div class="bar" data-width="75%"></div></div>
+<h3>SQL / Databases</h3>
+<div class="progress"><div class="bar" data-width="90%"></div></div>
+</div>
+</div>
+</section>
+<section id="projects">
+<h2 class="section-title">Projects</h2>
+<div class="frame">
+<div class="card fade">
+<h3>Fest Assist Chatbot – College Event Registration System</h3>
+<p>Engineered a Telegram chatbot using Python to automate college fest event registrations. Integrated Google Sheets as a real-time data store for participant records, implemented structured validation, and reduced manual coordination through automated confirmations.</p>
+</div>
+<div class="card fade">
+<h3>Medical Inventory Management System</h3>
+<p>Developed an inventory automation solution using Salesforce CRM with Apex triggers and workflow automation, enabling structured stock monitoring, validation-based controls, and improved operational visibility.</p>
+</div>
+<div class="card fade">
+<h3>Local Cloth Merchants Web Platform</h3>
+<p>Built a responsive web platform enabling local vendors to showcase products digitally using HTML, CSS, and JavaScript, helping establish a basic online presence for offline businesses.</p>
+</div>
+</div>
+</section>
+<section id="certifications">
+<h2 class="section-title">Certifications</h2>
+<div class="frame">
+<div class="card fade">
+<h3>Cloud Computing – NPTEL (IIT Kharagpur)</h3>
+<a href="https://drive.google.com/file/d/11MjedXsbWFa4HUivK0L4dsM-mOm679ST/view?usp=sharing" target="_blank" class="btn">View Certificate</a>
+</div>
+<div class="card fade">
+<h3>Salesforce Developer – SmartBridge</h3>
+<a href="https://drive.google.com/file/d/1VyvtoWL99krm_EMRSpXwIin1YKbNS_SO/view?usp=sharing" target="_blank" class="btn">View Certificate</a>
+</div>
+</div>
+</section>
+<section id="contact">
+<h2 class="section-title">Contact</h2>
+<div class="frame">
+<div class="card fade">
+Email: varunbhogaraju@gmail.com<br><br>
+LinkedIn: linkedin.com/in/varun-bhogaraju<br><br>
+GitHub: github.com/Varunbhogaraju<br><br>
+Phone: +91-7981829301
+</div>
+</div>
+</section>
+<script>
+const text="Hi, I'm Varun Bhogaraju";let index=0;function typeEffect(){if(index<text.length){document.getElementById("typing").innerHTML+=text.charAt(index);index++;setTimeout(typeEffect,60)}}typeEffect();
+function toggleMode(){document.body.classList.toggle("dark");localStorage.setItem("theme",document.body.classList.contains("dark")?"dark":"light")}
+if(localStorage.getItem("theme")==="dark"){document.body.classList.add("dark")}
+const faders=document.querySelectorAll(".fade");const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("show");entry.target.querySelectorAll(".bar").forEach(bar=>{bar.style.width=bar.dataset.width})}})},{threshold:.2});faders.forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
